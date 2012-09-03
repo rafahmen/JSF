@@ -10,52 +10,56 @@
 </head>
 <body>
 	<f:view>
-		<h:outputText value="Nome: "/>
-		<h:inputText value="#{agendaContatoBean.contato.nome }"/>
-		<br/>
-		
-		<h:outputText value="Endereço: "/>
-		<h:inputText value="#{agendaContatoBean.contato.endereco }"/>
-		
-		<br/>
-		
-		<h:outputText value="Sexo: "/>
-		<h:inputText value="#{agendaContatoBean.contato.sexo }"/>
-		
-		<br/>
-		
-		<h:commandButton action="#{agendaContatoBean.incluirContato}" value="Incluir"/>
-		<br/><br/>
-		
-		<h:dataTable var="obj" value="#{agendaContatoBean.contatos}" border="1" width="100%">
-		
-		<h:column>
-			<f:facet name="header">
-				<h:outputText value="Nome"/>
-			</f:facet>
-			<h:outputText value="#{obj.nome}"/>
-		</h:column>
-		<h:column>
-			<f:facet name="header">
-				<h:outputText value="Endereço"/>
-			</f:facet>
-			<h:outputText value="#{obj.endereco}"/>
-		</h:column>
-		
-		<h:column>
-			<f:facet name="header">
-				<h:outputText value="Sexo"/>
-			</f:facet>
-			<h:outputText value="#{obj.sexo}"/>
-		</h:column>
-		
-		
-		
+		<h:outputText value="Nome: " />
+		<h:inputText value="#{agendaContatoBean.contato.nome }" />
+		<br />
+
+		<h:outputText value="Endereço: " />
+		<h:inputText value="#{agendaContatoBean.contato.endereco }" />
+
+		<br />
+
+		<h:outputText value="Sexo: " />
+		<h:inputText value="#{agendaContatoBean.contato.sexo }" />
+
+		<br />
+
+		<h:commandButton actionListener="#{agendaContatoBean.incluirContato}"
+			value="Incluir" />
+
+		<br />
+		<br />
+
+		<h:dataTable var="obj" value="#{agendaContatoBean.contatos}"
+			border="1" width="100%">
+
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Nome" />
+				</f:facet>
+				<h:outputText value="#{obj.nome}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Endereço" />
+				</f:facet>
+				<h:outputText value="#{obj.endereco}" />
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Sexo" />
+				</f:facet>
+				<h:outputText value="#{obj.sexo}" />
+			</h:column>
+
+
+
 		</h:dataTable>
-		
-		
-		 
-		
+
+
+
+
 	</f:view>
 </body>
 </html>
